@@ -1,0 +1,22 @@
+{
+    "type": "sqlite",
+    "database": "twitter",
+    "entities": [
+        "src/users/entities/user.entity.ts",
+        "src/users/entities/user-following.entity.ts",
+        "src/tweets/entities/tweet.entity.ts",
+        "src/likes/entities/like.entity.ts"
+    ],
+    "synchronize": true,
+    "migrations": [
+        "src/migration/**/*.ts"
+    ],
+    "subscribers": [
+        "src/subscriber/**/*.ts"
+    ],
+    "cli": {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+}
